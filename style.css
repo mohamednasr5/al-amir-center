@@ -38,6 +38,7 @@
     --radius-lg: 20px;
     --radius-full: 50px;
     --transition: all 0.3s ease;
+    --focus-ring: 0 0 0 3px rgba(23, 162, 184, 0.45);
 }
 
 /* ===================================
@@ -55,6 +56,34 @@ input, textarea, select, button { font-family: 'Cairo', sans-serif; }
 .text-center { text-align: center; }
 .mt-40 { margin-top: 40px; }
 .mt-60 { margin-top: 60px; }
+
+/* Text Selection */
+::selection { background: var(--secondary-color); color: white; }
+
+/* Custom Scrollbar */
+html { scrollbar-color: var(--secondary-color) var(--light-color); }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--light-color); }
+::-webkit-scrollbar-thumb { background: var(--secondary-color); border-radius: var(--radius-full); }
+::-webkit-scrollbar-thumb:hover { background: var(--primary-color); }
+
+/* Keyboard Focus (kept distinct from mouse focus for cleaner UI) */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible,
+select:focus-visible, .btn:focus-visible, [tabindex]:focus-visible {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 3px;
+    border-radius: var(--radius-sm);
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
 
 /* Skip Link for Accessibility */
 .skip-link { position: fixed; top: -100%; left: 50%; transform: translateX(-50%); background: var(--primary-color); color: white; padding: 12px 24px; z-index: 10000; border-radius: 0 0 8px 8px; transition: top 0.3s; }
@@ -191,7 +220,7 @@ input, textarea, select, button { font-family: 'Cairo', sans-serif; }
    Service Areas Section
    =================================== */
 .service-areas-section { background: white; }
-.areas-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr); gap: 25px; }
+.areas-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; }
 .area-card { background: var(--light-color); padding: 30px; border-radius: var(--radius-lg); text-align: center; position: relative; overflow: hidden; border: 2px solid transparent; transition: var(--transition); }
 .area-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-md); border-color: var(--secondary-color); }
 .area-card.featured-area { background: var(--gradient-primary); color: white; }
@@ -581,7 +610,7 @@ input, textarea, select, button { font-family: 'Cairo', sans-serif; }
 .back-to-top:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(14, 77, 100, 0.4); }
 
 /* PWA Install Button */
-.pwa-install-btn { position: fixed; bottom: 85px; left: 25px; display: flex; align-items: center; gap: 10px; padding: 14px 22px; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border: none; border-radius: var(--radius-full); font-family: 'Cairo', sans-serif; font-size: 14px; font-weight: 700; cursor: pointer; box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4); z-index: 998; transition: var(--transform); animation: pwaPulse 2s infinite; }
+.pwa-install-btn { position: fixed; bottom: 85px; left: 25px; display: flex; align-items: center; gap: 10px; padding: 14px 22px; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border: none; border-radius: var(--radius-full); font-family: 'Cairo', sans-serif; font-size: 14px; font-weight: 700; cursor: pointer; box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4); z-index: 998; transition: var(--transition); animation: pwaPulse 2s infinite; }
 .pwa-install-btn:hover { transform: scale(1.05); }
 @keyframes pwaPulse { 0%, 100% { box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4); } 50% { box-shadow: 0 8px 35px rgba(102, 126, 234, 0.6); } }
 
@@ -653,4 +682,24 @@ input, textarea, select, button { font-family: 'Cairo', sans-serif; }
     .pwa-install-btn { bottom: 80px; left: 15px; padding: 12px 18px; font-size: 13px; }
     .slider-controls { bottom: 20px; gap: 12px; }
     .slider-prev, .slider-next { width: 38px; height: 38px; }
+}
+
+/* ===================================
+   Print Styles
+   (useful for printing price lists, hours, contact info)
+   =================================== */
+@media print {
+    .top-bar, .navbar, .ai-search-panel, .hero-slider .slider-controls,
+    .scroll-indicator, .back-to-top, .pwa-install-btn, .btn, .hamburger,
+    .footer-wave, .developer-signature, .footer-bottom, .cta-section,
+    .brands-marquee, .hero-buttons { display: none !important; }
+    * { animation: none !important; box-shadow: none !important; text-shadow: none !important; }
+    body { background: white; color: #000; }
+    .hero-section, .page-header { min-height: auto; padding: 20px 0; background: none !important; color: #000; }
+    .hero-overlay { display: none; }
+    .hero-title, .hero-subtitle, .page-header h1, .header-subtitle { color: #000 !important; -webkit-text-fill-color: #000 !important; }
+    a { color: #000; text-decoration: underline; }
+    .section { padding: 20px 0; }
+    .footer { background: white; color: #000; }
+    .footer-description, .footer-contact-info a, .hours-list-detailed li, .footer-links ul li a, .footer-services ul li a { color: #000 !important; }
 }
