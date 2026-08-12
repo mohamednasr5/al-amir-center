@@ -1,0 +1,17 @@
+{
+  "name": "مركز الأمير للتكييف وصيانة الأجهزة المنزلية",
+  "short_name": "مركز الأمير",
+  "description": "صيانة وتركيب أنظمة التكييف والأجهزة المنزلية لجميع الماركات العالمية - إدارة المهندس محمد الأمير",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#FBF8F2",
+  "theme_color": "#0B2A45",
+  "dir": "rtl",
+  "lang": "ar",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
