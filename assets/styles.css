@@ -270,13 +270,29 @@ footer{background:var(--navy-deep);color:#cfe3f0;padding:60px 0 20px;}
 .footer-grid ul li a:hover{color:var(--gold-bright);padding-right:4px;}
 .bottom-bar{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;text-align:center;font-size:.8rem;color:#8ba5b8;line-height:1.9;}
 .dev-credit{
-  margin-top:18px;padding-top:16px;border-top:1px dashed rgba(255,255,255,.12);
-  display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;font-size:.82rem;
+  margin-top:18px;padding:14px 18px;border-top:1px dashed rgba(255,255,255,.12);
+  display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;font-size:.85rem;
+  position:relative;
 }
-.dev-credit .snow{color:var(--gold-bright);animation:spinSlow 8s linear infinite;display:inline-block;}
+.dev-credit .snow{
+  color:var(--gold-bright);display:inline-block;font-size:1.05rem;
+  animation:spinSlow 7s linear infinite,glowPulse 2.4s ease-in-out infinite;
+}
 @keyframes spinSlow{to{transform:rotate(360deg);}}
-.dev-credit a{color:var(--gold-bright);font-weight:700;transition:.25s;}
-.dev-credit a:hover{color:#fff;text-decoration:underline;}
+@keyframes glowPulse{0%,100%{filter:drop-shadow(0 0 2px var(--gold-bright));}50%{filter:drop-shadow(0 0 9px var(--gold-bright));}}
+.dev-credit-text{font-weight:400;color:#9fb9cc;}
+.dev-credit-name{
+  font-weight:800;background:linear-gradient(90deg,#cfe3f0 0%,var(--gold-bright) 25%,#fff 50%,var(--gold-bright) 75%,#cfe3f0 100%);
+  background-size:280% auto;-webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:shimmer 5s linear infinite;text-decoration:none;
+}
+@keyframes shimmer{to{background-position:-280% center;}}
+.dev-credit-sep{color:rgba(255,255,255,.25);}
+.dev-credit-fb{color:#9fb9cc;font-weight:600;text-decoration:none;transition:.25s;}
+.dev-credit-fb:hover{color:var(--gold-bright);text-decoration:underline;}
+@media (prefers-reduced-motion: reduce){
+  .dev-credit .snow,.dev-credit-name{animation:none;}
+}
 
 /* ---------- Floating / sticky ---------- */
 .wa-float{
