@@ -5,7 +5,7 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://alamir-ac.github.io/sitemap.xml
+Sitemap: https://alamirhome.com/sitemap.xml
 
 # Crawl-delay (be nice to servers)
 Crawl-delay: 1
@@ -31,6 +31,54 @@ User-agent: Baiduspider
 Allow: /
 
 User-agent: Yandex
+Allow: /
+
+# Allow AI / answer-engine crawlers (ChatGPT Search, Perplexity,
+# Google AI Overviews, Bing Copilot, Claude) so the site is eligible
+# to be cited or summarized in AI search results
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: BingPreview
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
 Allow: /
 
 # Block bad bots

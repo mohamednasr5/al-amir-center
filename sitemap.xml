@@ -6,83 +6,83 @@
     
     <!-- Homepage -->
     <url>
-        <loc>https://alamir-ac.github.io/</loc>
-        <lastmod>2024-08-11</lastmod>
+        <loc>https://alamirhome.com/</loc>
+        <lastmod>2026-08-12</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     
     <!-- About Page -->
     <url>
-        <loc>https://alamir-ac.github.io/about.html</loc>
-        <lastmod>2024-08-11</lastmod>
+        <loc>https://alamirhome.com/about.html</loc>
+        <lastmod>2026-08-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <!-- Services Page -->
     <url>
-        <loc>https://alamir-ac.github.io/services.html</loc>
-        <lastmod>2024-08-11</lastmod>
+        <loc>https://alamirhome.com/services.html</loc>
+        <lastmod>2026-08-12</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     
     <!-- Portfolio Page -->
     <url>
-        <loc>https://alamir-ac.github.io/portfolio.html</loc>
-        <lastmod>2024-08-11</lastmod>
+        <loc>https://alamirhome.com/portfolio.html</loc>
+        <lastmod>2026-08-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     
     <!-- Contact Page -->
     <url>
-        <loc>https://alamir-ac.github.io/contact.html</loc>
-        <lastmod>2024-08-11</lastmod>
+        <loc>https://alamirhome.com/contact.html</loc>
+        <lastmod>2026-08-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <!-- Images (for Google Image Search) -->
     <url>
-        <loc>https://alamir-ac.github.io/images/1.jpg</loc>
-        <lastmod>2024-08-11</lastmod>
+        <loc>https://alamirhome.com/images/1.jpg</loc>
+        <lastmod>2026-08-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
     
     <url>
-        <loc>https://alamir-ac.github.io/images/2.jpg</loc>
-        <lastmod>2024-08-11</lastmod>
+        <loc>https://alamirhome.com/images/2.jpg</loc>
+        <lastmod>2026-08-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
     
     <url>
-        <loc>https://alamir-ac.github.io/images/3.jpg</loc>
-        <lastmod>2024-08-11</lastmod>
+        <loc>https://alamirhome.com/images/3.jpg</loc>
+        <lastmod>2026-08-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
     
     <url>
-        <loc>https://alamir-ac.github.io/images/4.jpg</loc>
-        <lastmod>2024-08-11</lastmod>
+        <loc>https://alamirhome.com/images/4.jpg</loc>
+        <lastmod>2026-08-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
     
     <url>
-        <loc>https://alamir-ac.github.io/images/5.jpg</loc>
-        <lastmod>2024-08-11</lastmod>
+        <loc>https://alamirhome.com/images/5.jpg</loc>
+        <lastmod>2026-08-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
     
     <url>
-        <loc>https://alamir-ac.github.io/images/6.jpg</loc>
-        <lastmod>2024-08-11</lastmod>
+        <loc>https://alamirhome.com/images/6.jpg</loc>
+        <lastmod>2026-08-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
